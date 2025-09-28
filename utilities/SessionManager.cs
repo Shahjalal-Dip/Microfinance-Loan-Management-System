@@ -26,5 +26,25 @@ namespace Microfinance_Loan_Management_System.Utilities
             return CurrentUser != null;
         }
 
+        public static bool HasRole(string role)
+        {
+            return CurrentUser?.Role?.Equals(role, StringComparison.OrdinalIgnoreCase) == true;
+        }
+
+        public static bool IsAdmin()
+        {
+            return HasRole("Admin");
+        }
+
+        public static bool IsLoanOfficer()
+        {
+            return HasRole("LoanOfficer");
+        }
+
+        public static bool IsMember()
+        {
+            return HasRole("Member");
+        }
     }
+
 }

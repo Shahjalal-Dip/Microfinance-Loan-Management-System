@@ -74,7 +74,7 @@ namespace MicroFinance_Loan.presentation.Payments
                 {
                     LoadPaymentDetails();
                     button1.Enabled = true;
-                    button4.Enabled = true;
+                    button2.Enabled = true;
                 }
             }
         }

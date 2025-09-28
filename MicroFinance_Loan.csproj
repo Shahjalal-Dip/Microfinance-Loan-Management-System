@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="businesslogic\Models\Admin.cs" />
+    <Compile Include="businesslogic\Models\Group.cs" />
     <Compile Include="businesslogic\Models\Loan.cs" />
     <Compile Include="businesslogic\Models\LoanOfficer.cs" />
     <Compile Include="businesslogic\Models\LoanPolicy.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="businesslogic\Models\Repayment.cs" />
     <Compile Include="businesslogic\Models\User.cs" />
     <Compile Include="businesslogic\Services\AuthenticationService.cs" />
+    <Compile Include="businesslogic\Services\GroupService.cs" />
     <Compile Include="businesslogic\Services\LoanService.cs" />
     <Compile Include="businesslogic\Services\RepaymentService.cs" />
     <Compile Include="businesslogic\Services\ReportService.cs" />
@@ -68,12 +70,14 @@
     <Compile Include="dataaccess\BaseRepository.cs" />
     <Compile Include="dataaccess\ConnectionManager.cs" />
     <Compile Include="dataaccess\Repositories\AdminRepository.cs" />
+    <Compile Include="dataaccess\Repositories\GroupRepository.cs" />
     <Compile Include="dataaccess\Repositories\LoanOfficerRepository.cs" />
     <Compile Include="dataaccess\Repositories\LoanPolicyRepository.cs" />
     <Compile Include="dataaccess\Repositories\LoanRepository.cs" />
     <Compile Include="dataaccess\Repositories\MemberRepository.cs" />
     <Compile Include="dataaccess\Repositories\RepaymentRepository.cs" />
     <Compile Include="dataaccess\Repositories\UserRepository.cs" />
+    <Compile Include="presentation\About\AboutForm.cs" />
     <Compile Include="presentation\Authentication\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +121,7 @@
     <Compile Include="presentation\Dashboards\OfficerDashboard.Designer.cs">
       <DependentUpon>OfficerDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="presentation\Groups\GroupManagementForm.cs" />
     <Compile Include="presentation\Loans\AllLoansForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +146,7 @@
     <Compile Include="presentation\Loans\LoanApprovalForm.Designer.cs">
       <DependentUpon>LoanApprovalForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="presentation\Loans\LoanDetailsForm.cs" />
     <Compile Include="presentation\Loans\PendingLoanForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,7 @@
     <Compile Include="presentation\Payments\PaymentCollectionForm.Designer.cs">
       <DependentUpon>PaymentCollectionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="presentation\Payments\PaymentHistoryForm.cs" />
     <Compile Include="presentation\Policies\AddEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +214,7 @@
     <Compile Include="presentation\Settings\ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="presentation\Settings\SystemSettingsForm.cs" />
     <Compile Include="presentation\Settings\UserProfileForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -340,8 +348,6 @@
     <Content Include=".gitignore" />
     <Content Include="resource\images\Microfinance-Loan.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="presentation\Groups\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

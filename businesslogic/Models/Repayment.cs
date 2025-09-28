@@ -14,6 +14,17 @@ namespace Microfinance_Loan_Management_System.BusinessLogic.Models
         public decimal LateFee { get; set; }
         public string PaymentMethod { get; set; }
         public int? CollectedBy { get; set; }
-        public string Notes { get; set; }     
+        public string Notes { get; set; }
+
+        public bool IsOverdue()
+        {
+            return DateTime.Now > DueDate && AmountPaid < AmountDue;
+        }
+
+        public int GetDaysOverdue()
+        {
+            if (!IsOverdue()) return 0;
+            return (DateTime.Now - DueDate).Days;
+        }
     }
 }

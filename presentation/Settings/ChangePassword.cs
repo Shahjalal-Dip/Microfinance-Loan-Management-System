@@ -19,7 +19,7 @@ namespace MicroFinance_Loan.presentation.Settings
         public ChangePassword()
         {
             InitializeComponent();
-            label1.Text = $"Welcome {CurrentUser.Name} Change Your Password";
+            label1.Text = $"Welcome {CurrentUser.Name} You Can Change Your Password";
         }
 
         private void ChangePassword_Load(object sender, EventArgs e)

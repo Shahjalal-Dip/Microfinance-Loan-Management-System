@@ -3,7 +3,7 @@ using System;
 namespace Microfinance_Loan_Management_System.BusinessLogic.Models
 {
   
-    public class User
+    public abstract class User
     {
         public int UserID { get; set; }
         public string Name { get; set; }
@@ -13,5 +13,6 @@ namespace Microfinance_Loan_Management_System.BusinessLogic.Models
         public DateTime CreatedDate { get; set; }
         public bool IsActive { get; set; }
 
+        public abstract string GetDisplayInfo();
     }
 }

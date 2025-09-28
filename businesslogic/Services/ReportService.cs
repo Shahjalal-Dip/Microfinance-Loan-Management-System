@@ -9,29 +9,47 @@ namespace Microfinance_Loan_Management_System.BusinessLogic.Services
     {
         public DataTable GetLoanSummaryReport()
         {
-            string query = @"SELECT l.Status,COUNT(*) as LoanCount,SUM(l.AmountRequested) as TotalRequested,SUM(l.ApprovedAmount) as TotalApproved
-                             FROM Loans l
-                             GROUP BY l.Status";
+            string query = @"SELECT 
+                        l.Status,
+                        COUNT(*) as LoanCount,
+                        SUM(l.AmountRequested) as TotalRequested,
+                        SUM(l.ApprovedAmount) as TotalApproved
+                        FROM Loans l
+                        GROUP BY l.Status";
 
             return ExecuteQuery(query);
         }
 
         public DataTable GetOverdueLoansReport()
         {
-            string query = @"SELECT u.Name AS MemberName,l.LoanID,l.ApprovedAmount,ls.DueDate,ls.TotalAmount AS AmountDue,DATEDIFF(DAY, ls.DueDate, GETDATE()) AS DaysOverdue
-                               FROM Loans l
-                               INNER JOIN Members m ON l.MemberID = m.MemberID
-                               INNER JOIN Users u ON m.MemberID = u.UserID
-                               INNER JOIN LoanSchedule ls ON l.LoanID = ls.LoanID
-                               WHERE ls.DueDate < GETDATE()
-                               AND ls.IsPaid = 0
-                               ORDER BY ls.DueDate;";
+            string query = @"SELECT 
+                               u.Name AS MemberName,
+                               l.LoanID,
+                               l.ApprovedAmount,
+                               ls.DueDate,
+                               ls.TotalAmount AS AmountDue,
+                               DATEDIFF(DAY, ls.DueDate, GETDATE()) AS DaysOverdue
+                           FROM Loans l
+                           INNER JOIN Members m ON l.MemberID = m.MemberID
+                           INNER JOIN Users u ON m.MemberID = u.UserID
+                           INNER JOIN LoanSchedule ls ON l.LoanID = ls.LoanID
+                           WHERE ls.DueDate < GETDATE()
+                             AND ls.IsPaid = 0
+                           ORDER BY ls.DueDate;
+                           ";
+
             return ExecuteQuery(query);
         }
 
         public DataTable GetCollectionReport(DateTime fromDate, DateTime toDate)
         {
-            string query = @"SELECT u.Name AS MemberName,l.LoanID,r.PaymentDate,r.AmountPaid,r.LateFee,uo.Name AS CollectedBy
+            string query = @"SELECT 
+                            u.Name AS MemberName,
+                               l.LoanID,
+                               r.PaymentDate,
+                               r.AmountPaid,
+                               r.LateFee,
+                               uo.Name AS CollectedBy
                            FROM Repayments r
                            INNER JOIN Loans l ON r.LoanID = l.LoanID
                            INNER JOIN Members m ON l.MemberID = m.MemberID
@@ -39,7 +57,8 @@ namespace Microfinance_Loan_Management_System.BusinessLogic.Services
                            LEFT JOIN LoanOfficers lo ON r.CollectedBy = lo.OfficerID
                            LEFT JOIN Users uo ON lo.OfficerID = uo.UserID
                            WHERE r.PaymentDate BETWEEN @FromDate AND @ToDate
-                           ORDER BY r.PaymentDate DESC;";
+                           ORDER BY r.PaymentDate DESC;
+                           ";
 
             using (SqlConnection conn = new SqlConnection(DatabaseConnection.ConnectionString))
             {
@@ -56,7 +75,9 @@ namespace Microfinance_Loan_Management_System.BusinessLogic.Services
 
         public DataTable GetProfitLossReport(DateTime fromDate, DateTime toDate)
         {
-            string query = @"SELECT 'Interest Income' as Category,SUM(r.AmountPaid - ls.PrincipalAmount) as Amount
+            string query = @"SELECT 
+                        'Interest Income' as Category,
+                        SUM(r.AmountPaid - ls.PrincipalAmount) as Amount
                         FROM Repayments r
                         INNER JOIN LoanSchedule ls ON r.LoanID = ls.LoanID AND r.InstallmentNumber = ls.InstallmentNumber
                         WHERE r.PaymentDate BETWEEN @FromDate AND @ToDate

@@ -18,10 +18,13 @@ namespace Microfinance_Loan_Management_System.BusinessLogic.Models
         public int? OfficerID { get; set; }
         public int PolicyID { get; set; }
         public int? GroupID { get; set; }
+
+    
         public string MemberName { get; set; }
         public string OfficerName { get; set; }
         public string PolicyType { get; set; }
-   
+
+     
         public decimal GetTotalPayableAmount()
         {
             if (!ApprovedAmount.HasValue) return 0;

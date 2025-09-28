@@ -42,11 +42,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 38);
+            this.label1.Font = new System.Drawing.Font("Algerian", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(205, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 33);
+            this.label1.Size = new System.Drawing.Size(90, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
@@ -79,7 +78,7 @@
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(68, 114);
+            this.panel1.Location = new System.Drawing.Point(263, 108);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(425, 219);
             this.panel1.TabIndex = 3;
@@ -127,7 +126,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(577, 519);
+            this.ClientSize = new System.Drawing.Size(933, 519);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);

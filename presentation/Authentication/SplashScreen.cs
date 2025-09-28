@@ -29,7 +29,7 @@ namespace Microfinance_Loan_Management_System.Presentation.Authentication
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            progressBar1.Increment(1);
+            progressBar1.Increment(4);
             parcentageLable.Text = "Loading... "+ progressBar1.Value.ToString() + "%";
         if (progressBar1.Value < 100)
         {

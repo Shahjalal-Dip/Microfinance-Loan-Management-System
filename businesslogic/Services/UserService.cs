@@ -70,7 +70,7 @@ namespace Microfinance_Loan_Management_System.BusinessLogic.Services
 
         public bool DeactivateUser(int userID)
         {
-            return userRepository.Delete(userID); 
+            return userRepository.Delete(userID); // Soft delete
         }
 
         private string HashPassword(string password)

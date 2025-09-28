@@ -34,7 +34,11 @@
             this.allLoansToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.collectPaymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paymentsHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.overdueReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.membersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewMembersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,6 +85,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loansToolStripMenuItem,
             this.paymentsToolStripMenuItem,
+            this.membersToolStripMenuItem,
             this.toolsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -115,6 +120,7 @@
             // 
             this.paymentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.collectPaymentsToolStripMenuItem,
+            this.paymentsHistoryToolStripMenuItem,
             this.overdueReportsToolStripMenuItem});
             this.paymentsToolStripMenuItem.Name = "paymentsToolStripMenuItem";
             this.paymentsToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
@@ -123,16 +129,43 @@
             // collectPaymentsToolStripMenuItem
             // 
             this.collectPaymentsToolStripMenuItem.Name = "collectPaymentsToolStripMenuItem";
-            this.collectPaymentsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.collectPaymentsToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.collectPaymentsToolStripMenuItem.Text = "Collect Payments";
             this.collectPaymentsToolStripMenuItem.Click += new System.EventHandler(this.collectPaymentsToolStripMenuItem_Click);
+            // 
+            // paymentsHistoryToolStripMenuItem
+            // 
+            this.paymentsHistoryToolStripMenuItem.Name = "paymentsHistoryToolStripMenuItem";
+            this.paymentsHistoryToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.paymentsHistoryToolStripMenuItem.Text = "Payment History";
             // 
             // overdueReportsToolStripMenuItem
             // 
             this.overdueReportsToolStripMenuItem.Name = "overdueReportsToolStripMenuItem";
-            this.overdueReportsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.overdueReportsToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.overdueReportsToolStripMenuItem.Text = "Overdue Report";
             this.overdueReportsToolStripMenuItem.Click += new System.EventHandler(this.overdueReportsToolStripMenuItem_Click);
+            // 
+            // membersToolStripMenuItem
+            // 
+            this.membersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewMembersToolStripMenuItem,
+            this.groupManagementToolStripMenuItem});
+            this.membersToolStripMenuItem.Name = "membersToolStripMenuItem";
+            this.membersToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.membersToolStripMenuItem.Text = "Members";
+            // 
+            // viewMembersToolStripMenuItem
+            // 
+            this.viewMembersToolStripMenuItem.Name = "viewMembersToolStripMenuItem";
+            this.viewMembersToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.viewMembersToolStripMenuItem.Text = "View Members";
+            // 
+            // groupManagementToolStripMenuItem
+            // 
+            this.groupManagementToolStripMenuItem.Name = "groupManagementToolStripMenuItem";
+            this.groupManagementToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.groupManagementToolStripMenuItem.Text = "Group Management";
             // 
             // toolsToolStripMenuItem
             // 
@@ -146,14 +179,14 @@
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -236,9 +269,8 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(267, 40);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Exit";
+            this.button3.Text = "View Member Details";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -470,8 +502,12 @@
         private System.Windows.Forms.ToolStripMenuItem allLoansToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paymentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem collectPaymentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem paymentsHistoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem overdueReportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem membersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewMembersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem groupManagementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;

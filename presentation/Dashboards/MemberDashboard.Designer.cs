@@ -59,6 +59,7 @@
             this.viewAllLoansToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.makePaymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paymentsHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -356,21 +357,22 @@
             // applyForLoansToolStripMenuItem
             // 
             this.applyForLoansToolStripMenuItem.Name = "applyForLoansToolStripMenuItem";
-            this.applyForLoansToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.applyForLoansToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.applyForLoansToolStripMenuItem.Text = "Apply for Loans";
             this.applyForLoansToolStripMenuItem.Click += new System.EventHandler(this.applyForLoansToolStripMenuItem_Click);
             // 
             // viewAllLoansToolStripMenuItem
             // 
             this.viewAllLoansToolStripMenuItem.Name = "viewAllLoansToolStripMenuItem";
-            this.viewAllLoansToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewAllLoansToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.viewAllLoansToolStripMenuItem.Text = "View All Loans";
             this.viewAllLoansToolStripMenuItem.Click += new System.EventHandler(this.viewAllLoansToolStripMenuItem_Click_1);
             // 
             // paymentsToolStripMenuItem
             // 
             this.paymentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.makePaymentsToolStripMenuItem});
+            this.makePaymentsToolStripMenuItem,
+            this.paymentsHistoryToolStripMenuItem});
             this.paymentsToolStripMenuItem.Name = "paymentsToolStripMenuItem";
             this.paymentsToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.paymentsToolStripMenuItem.Text = "Payments";
@@ -378,9 +380,16 @@
             // makePaymentsToolStripMenuItem
             // 
             this.makePaymentsToolStripMenuItem.Name = "makePaymentsToolStripMenuItem";
-            this.makePaymentsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.makePaymentsToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.makePaymentsToolStripMenuItem.Text = "Make Payment";
             this.makePaymentsToolStripMenuItem.Click += new System.EventHandler(this.makePaymentsToolStripMenuItem_Click);
+            // 
+            // paymentsHistoryToolStripMenuItem
+            // 
+            this.paymentsHistoryToolStripMenuItem.Name = "paymentsHistoryToolStripMenuItem";
+            this.paymentsHistoryToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.paymentsHistoryToolStripMenuItem.Text = "Payments History";
+            this.paymentsHistoryToolStripMenuItem.Click += new System.EventHandler(this.paymentsHistoryToolStripMenuItem_Click);
             // 
             // profileToolStripMenuItem
             // 
@@ -396,28 +405,28 @@
             // updateProfileToolStripMenuItem
             // 
             this.updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
-            this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.updateProfileToolStripMenuItem.Text = "Update Profile";
             this.updateProfileToolStripMenuItem.Click += new System.EventHandler(this.updateProfileToolStripMenuItem_Click);
             // 
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.logOutToolStripMenuItem.Text = "Logout";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -473,6 +482,7 @@
         private System.Windows.Forms.ToolStripMenuItem viewAllLoansToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paymentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem makePaymentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem paymentsHistoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem profileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;

@@ -12,7 +12,11 @@ namespace Microfinance_Loan_Management_System.BusinessLogic.Models
         public int? GroupID { get; set; }
         public string GroupName { get; set; }
         public DateTime JoinDate { get; set; }
-       
+
+        public override string GetDisplayInfo()
+        {
+            return $"Member: {Name} (NID: {NID}) - Income: {Income:C}";
+        }
         public decimal GetMaxLoanEligibility()
         {
             return Income * 12;

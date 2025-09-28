@@ -1,7 +1,8 @@
 using System;
 
 namespace Microfinance_Loan_Management_System.BusinessLogic.Models
-{ 
+{
+    
     public class LoanPolicy
     {
         public int PolicyID { get; set; }
