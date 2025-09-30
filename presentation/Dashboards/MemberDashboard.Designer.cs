@@ -198,11 +198,11 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.Purple;
+            this.panel7.BackColor = System.Drawing.Color.Snow;
             this.panel7.Controls.Add(this.label9);
             this.panel7.Controls.Add(this.label6);
             this.panel7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel7.ForeColor = System.Drawing.Color.White;
+            this.panel7.ForeColor = System.Drawing.Color.Black;
             this.panel7.Location = new System.Drawing.Point(185, 21);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(180, 110);
@@ -230,11 +230,11 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.Purple;
+            this.panel6.BackColor = System.Drawing.Color.Snow;
             this.panel6.Controls.Add(this.label10);
             this.panel6.Controls.Add(this.label7);
             this.panel6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel6.ForeColor = System.Drawing.Color.White;
+            this.panel6.ForeColor = System.Drawing.Color.Black;
             this.panel6.Location = new System.Drawing.Point(371, 21);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(167, 110);
@@ -262,11 +262,11 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.Purple;
+            this.panel5.BackColor = System.Drawing.Color.Snow;
             this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel5.ForeColor = System.Drawing.Color.White;
+            this.panel5.ForeColor = System.Drawing.Color.Black;
             this.panel5.Location = new System.Drawing.Point(12, 21);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(167, 110);
@@ -306,7 +306,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.panel2.BackColor = System.Drawing.Color.Purple;
             this.panel2.Controls.Add(this.dataGridView2);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Location = new System.Drawing.Point(12, 283);

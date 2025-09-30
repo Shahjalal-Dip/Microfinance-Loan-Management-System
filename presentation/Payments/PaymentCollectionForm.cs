@@ -83,11 +83,12 @@ namespace MicroFinance_Loan.presentation.Payments
                 return false;
             }
 
-            if (dateTimePicker1.Value > DateTime.Now.Date)
+            if (dateTimePicker1.Value.Date != DateTime.Now.Date)
             {
-                ShowMessage("Payment date cannot be in the future.", "Validation Error", MessageBoxIcon.Warning);
+                ShowMessage("You can only collect payments for today.", "Validation Error", MessageBoxIcon.Warning);
                 return false;
             }
+
 
             return true;
         }
